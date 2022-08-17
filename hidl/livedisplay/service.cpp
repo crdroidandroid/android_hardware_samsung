@@ -25,6 +25,7 @@
 #include <hidl/HidlTransportSupport.h>
 
 #include "AdaptiveBacklight.h"
+#include "AntiFlicker.h"
 #include "DisplayColorCalibration.h"
 #include "DisplayModes.h"
 #include "ReadingEnhancement.h"
@@ -37,6 +38,7 @@ using android::status_t;
 using android::OK;
 
 using vendor::lineage::livedisplay::V2_0::samsung::AdaptiveBacklight;
+using vendor::lineage::livedisplay::V2_0::samsung::AntiFlicker;
 using vendor::lineage::livedisplay::V2_0::samsung::DisplayColorCalibration;
 using vendor::lineage::livedisplay::V2_0::samsung::DisplayModes;
 using vendor::lineage::livedisplay::V2_0::samsung::ReadingEnhancement;
@@ -44,6 +46,7 @@ using vendor::lineage::livedisplay::V2_0::samsung::SunlightEnhancement;
 
 int main() {
     sp<AdaptiveBacklight> adaptiveBacklight;
+    sp<AntiFlicker> antiFlicker;
     sp<DisplayColorCalibration> displayColorCalibration;
     sp<DisplayModes> displayModes;
     sp<ReadingEnhancement> readingEnhancement;
@@ -87,6 +90,13 @@ int main() {
     }
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
+
+    if (antiFlicker->isSupported()) {
+        if (antiFlicker->registerAsService() != android::OK) {
+            LOG(ERROR) << "Cannot register antiflicker HAL service.";
+            return 1;
+        }
+    }
 
     if (adaptiveBacklight->isSupported()) {
         status = adaptiveBacklight->registerAsService();

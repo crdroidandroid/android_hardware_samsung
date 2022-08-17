@@ -24,3 +24,6 @@ service vendor.livedisplay-hal-2-0-samsung-qcom /vendor/bin/hw/vendor.lineage.li
     class late_start
     user system
     group system
+
+on boot
+	chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dc_dimming
