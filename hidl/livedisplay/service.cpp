@@ -15,9 +15,9 @@
  */
 
 #ifdef LIVES_IN_SYSTEM
-#define LOG_TAG "lineage.livedisplay@2.0-service.samsung-qcom"
+#define LOG_TAG "lineage.livedisplay@2.1-service.samsung-qcom"
 #else
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.samsung-qcom"
+#define LOG_TAG "vendor.lineage.livedisplay@2.1-service.samsung-qcom"
 #endif
 
 #include <android-base/logging.h>
@@ -37,12 +37,12 @@ using android::sp;
 using android::status_t;
 using android::OK;
 
-using vendor::lineage::livedisplay::V2_0::samsung::AdaptiveBacklight;
-using vendor::lineage::livedisplay::V2_0::samsung::AntiFlicker;
-using vendor::lineage::livedisplay::V2_0::samsung::DisplayColorCalibration;
-using vendor::lineage::livedisplay::V2_0::samsung::DisplayModes;
-using vendor::lineage::livedisplay::V2_0::samsung::ReadingEnhancement;
-using vendor::lineage::livedisplay::V2_0::samsung::SunlightEnhancement;
+using vendor::lineage::livedisplay::V2_1::samsung::AdaptiveBacklight;
+using vendor::lineage::livedisplay::V2_1::samsung::AntiFlicker;
+using vendor::lineage::livedisplay::V2_1::samsung::DisplayColorCalibration;
+using vendor::lineage::livedisplay::V2_1::samsung::DisplayModes;
+using vendor::lineage::livedisplay::V2_1::samsung::ReadingEnhancement;
+using vendor::lineage::livedisplay::V2_1::samsung::SunlightEnhancement;
 
 int main() {
     sp<AdaptiveBacklight> adaptiveBacklight;

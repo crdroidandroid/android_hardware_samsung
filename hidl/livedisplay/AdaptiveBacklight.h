@@ -18,12 +18,12 @@
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
-#include <vendor/lineage/livedisplay/2.0/IAdaptiveBacklight.h>
+#include <vendor/lineage/livedisplay/2.1/IAdaptiveBacklight.h>
 
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 using ::android::hardware::hidl_array;
@@ -38,7 +38,7 @@ class AdaptiveBacklight : public IAdaptiveBacklight {
   public:
     bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+    // Methods from ::vendor::lineage::livedisplay::V2_1::IAdaptiveBacklight follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 
@@ -46,7 +46,7 @@ class AdaptiveBacklight : public IAdaptiveBacklight {
 };
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

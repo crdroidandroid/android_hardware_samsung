@@ -18,12 +18,12 @@
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
-#include <vendor/lineage/livedisplay/2.0/ISunlightEnhancement.h>
+#include <vendor/lineage/livedisplay/2.1/ISunlightEnhancement.h>
 
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 using ::android::hardware::hidl_array;
@@ -38,7 +38,7 @@ class SunlightEnhancement : public ISunlightEnhancement {
   public:
     bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement follow.
+    // Methods from ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 
@@ -48,7 +48,7 @@ class SunlightEnhancement : public ISunlightEnhancement {
 };
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

@@ -16,12 +16,12 @@
 
 #pragma once
 
-#include <vendor/lineage/livedisplay/2.0/IDisplayColorCalibration.h>
+#include <vendor/lineage/livedisplay/2.1/IDisplayColorCalibration.h>
 
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 using ::android::hardware::hidl_vec;
@@ -34,7 +34,7 @@ class DisplayColorCalibration : public IDisplayColorCalibration {
   public:
     bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayColorCalibration follow.
+    // Methods from ::vendor::lineage::livedisplay::V2_1::IDisplayColorCalibration follow.
     Return<int32_t> getMaxValue() override;
     Return<int32_t> getMinValue() override;
     Return<void> getCalibration(getCalibration_cb _hidl_cb) override;
@@ -42,7 +42,7 @@ class DisplayColorCalibration : public IDisplayColorCalibration {
 };
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

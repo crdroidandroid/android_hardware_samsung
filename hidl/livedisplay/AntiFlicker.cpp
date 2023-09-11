@@ -26,7 +26,7 @@
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 static constexpr const char* kDcDimmingPath = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dc_dimming";
@@ -56,7 +56,7 @@ Return<bool> AntiFlicker::setEnabled(bool enabled) {
 }
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

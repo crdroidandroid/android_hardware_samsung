@@ -29,7 +29,7 @@ using android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
+namespace V2_1 {
 namespace samsung {
 
 bool DisplayColorCalibration::isSupported() {
@@ -38,7 +38,7 @@ bool DisplayColorCalibration::isSupported() {
     return rgb.good();
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayColorCalibration follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::IDisplayColorCalibration follow.
 Return<int32_t> DisplayColorCalibration::getMaxValue() {
     return 32768;
 }
@@ -73,7 +73,7 @@ Return<bool> DisplayColorCalibration::setCalibration(const hidl_vec<int32_t>& rg
 }
 
 }  // namespace samsung
-}  // namespace V2_0
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
