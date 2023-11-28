@@ -56,5 +56,3 @@ SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() 
         }
     }
 }
-
-SamsungCameraProvider::~SamsungCameraProvider() {}

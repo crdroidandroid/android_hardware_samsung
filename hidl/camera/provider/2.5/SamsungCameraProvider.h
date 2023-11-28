@@ -26,7 +26,7 @@ using ::android::hardware::Return;
 class SamsungCameraProvider : public LegacyCameraProviderImpl_2_5 {
 public:
     SamsungCameraProvider();
-    ~SamsungCameraProvider();
+    ~SamsungCameraProvider() = default;
 
 private:
     std::vector<int> mExtraIDs = {
