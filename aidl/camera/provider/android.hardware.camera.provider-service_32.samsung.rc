@@ -1,8 +1,0 @@
-service vendor.camera.provider /vendor/bin/hw/android.hardware.camera.provider-service_32.samsung
-    interface aidl android.hardware.camera.provider.ICameraProvider/internal/0
-    class hal
-    user cameraserver
-    group audio camera input drmrpc usb
-    ioprio rt 4
-    capabilities SYS_NICE
-    task_profiles CameraServiceCapacity MaxPerformance
