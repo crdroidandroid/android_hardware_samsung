@@ -216,10 +216,7 @@ bool CameraProvider::initialize() {
         }
     }
 #ifdef EXTRA_IDS
-    std::vector<int> extraIDs = {
-        EXTRA_IDS
-    };
-    for (int i : extraIDs) {
+    for (int i : {EXTRA_IDS}) {
         if (!initOneCamera(i)) {
             mModule.clear();
             return false;
