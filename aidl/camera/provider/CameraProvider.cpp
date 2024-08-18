@@ -171,11 +171,7 @@ bool CameraProvider::initOneCamera(int id) {
         return false;
     }
 
-    char cameraId[kMaxCameraIdLen];
-    snprintf(cameraId, sizeof(cameraId), "%d", id);
-    std::string cameraIdStr(cameraId);
-    mCameraStatusMap[cameraIdStr] = CAMERA_DEVICE_STATUS_PRESENT;
-
+    mCameraStatusMap[std::to_string(id)] = CAMERA_DEVICE_STATUS_PRESENT;
     addDeviceNames(id);
 
     return true;
