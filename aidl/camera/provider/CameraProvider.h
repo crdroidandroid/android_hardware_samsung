@@ -65,7 +65,7 @@ class CameraProvider : public BnCameraProvider, protected camera_module_callback
     // Must be queried before using any APIs.
     // APIs will only work when this returns true
     bool mInitFailed;
-    bool initCamera(int id);
+    bool initOneCamera(int id);
     bool initialize();
 
     std::vector<VendorTagSection> mVendorTagSections;
